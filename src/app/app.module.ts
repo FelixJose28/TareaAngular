@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetDemoComponent } from './gets/get-demo/get-demo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
