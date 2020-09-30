@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL : 'https://jsonplaceholder.typicode.com/'
+  apiURL : 'https://api.adamix.net/apec/cedula/'
 };
 
 /*

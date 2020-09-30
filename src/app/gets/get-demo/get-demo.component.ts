@@ -19,7 +19,11 @@ export class GetDemoComponent implements OnInit {
     this.user = null;
 
     this.userService.getUser(userID).subscribe((userFromTheApi: User)=>{
-      this.user = userFromTheApi;
+      if(userFromTheApi.ok == true){
+        this.user = userFromTheApi;
+      }else{
+        this.notFound = true;
+      }
 
     },(err: any)=>{
       console.log(err)

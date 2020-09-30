@@ -3,17 +3,23 @@
 <button (click)="getUser(textId.value)" >Get User</button>
 <hr>
 <ng-container *ngIf="notFound">
-    User not fudn
+    Usuario no encontrado
 </ng-container>
 
 <ng-container *ngIf="user">
     <div>
-      Id: {{user.id}}
+      Cedula: {{user.Cedula}}
     </div>
     <div>
-      Name: {{user.name}}
+      Nombre: {{user.Nombres}}
     </div>
     <div>
-      UserName: {{user.username}}
+      Apellido: {{user.Apellido1 +' '+user.Apellido2}}
+    </div>
+    <div>
+      Fecha: {{user.FechaNacimiento}}
+    </div>
+    <div>
+      Foto: <img src="{{user.foto}}" alt="">
     </div>
 </ng-container>
