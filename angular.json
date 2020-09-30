@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TareaAngular"
+    }
+  },
+  "defaultProject": "TareaAngular",
+  "cli": {
+    "analytics": "656bd1d9-1b2c-4d46-ae6c-20acb0433072"
+  }
 }

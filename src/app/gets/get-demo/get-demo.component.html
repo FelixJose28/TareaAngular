@@ -1,0 +1,19 @@
+<p>get-demo works!</p>
+<input type="text" #textId>
+<button (click)="getUser(textId.value)" >Get User</button>
+<hr>
+<ng-container *ngIf="notFound">
+    User not fudn
+</ng-container>
+
+<ng-container *ngIf="user">
+    <div>
+      Id: {{user.id}}
+    </div>
+    <div>
+      Name: {{user.name}}
+    </div>
+    <div>
+      UserName: {{user.username}}
+    </div>
+</ng-container>
