@@ -7,25 +7,25 @@
   <title>Document</title>
 </head>
 <body>
+
     <div class="container">
       <div class="container mx-auto px-0">
         <ul class="nav justify-content-end">
           <li class="nav-item bg-primario" id="Lhome">
-            <a class="nav-link active text-whit  iconoHome" href="">
+            <a class="nav-link active text-whit  iconoHome" routerLink="/get-demo" >
               Registrar
             </a>
           </li>
           <li class="nav-item  bg-secundario" id="Llista" >
-            <a class="nav-link text-whit iconoLista" href="">
+            <a class="nav-link text-whit iconoLista" routerLink="/sobremi">
               Sobre mi
             </a>
 
           </li>
         </ul>
         </div>
-      <app-get-demo>
+        <router-outlet></router-outlet>
 
-      </app-get-demo>
     </div>
 </body>
 </html>

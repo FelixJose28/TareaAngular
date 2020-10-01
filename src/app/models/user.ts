@@ -3,7 +3,7 @@ export interface User {
   Nombres: string;
   Apellido1: string;
   Apellido2: string;
-  FechaNacimiento: Date;
+  FechaNacimiento: string;
   foto: string;
   ok: boolean;
 }
