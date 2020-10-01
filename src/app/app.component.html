@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="container">
+  </head>
+  <body>
+    <div class="container p-4">
       <div class="container mx-auto px-0">
         <ul class="nav justify-content-end">
           <li class="nav-item bg-primario" id="Lhome">
-            <a class="nav-link active text-whit  iconoHome" routerLink="/get-demo" >
+            <a class="nav-link active tRegistrar " routerLink="/get-demo" >
               Registrar
             </a>
           </li>
           <li class="nav-item  bg-secundario" id="Llista" >
-            <a class="nav-link text-whit iconoLista" routerLink="/sobremi">
+            <a class="nav-link tRegistrar" routerLink="/sobremi">
               Sobre mi
             </a>
 
           </li>
         </ul>
-        </div>
-        <router-outlet></router-outlet>
 
     </div>
-</body>
+
+            <router-outlet></router-outlet>
+
+    </div>
+    <div class="custom-shape-divider-bottom-1601532525">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </body>
 </html>
+
+
 

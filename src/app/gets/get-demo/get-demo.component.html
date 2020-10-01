@@ -1,28 +1,50 @@
-<p>get-demo works!</p>
-<input type="text" #textId>
-<button (click)="getUser(textId.value)" >Get User</button>
-<hr>
-<ng-container *ngIf="notFound">
-    Usuario no encontrado
-</ng-container>
+<div class="dConsultar ">
 
-<ng-container *ngIf="user">
-    <div>
-      Cedula: {{user.Cedula}}
+  <div class="dBuscar mx-auto">
+    <div class="form-group  mx-auto text-center">
+      <h1 class="tRegistrar p-3">Registrar</h1>
+      <input class="form-control mx-auto w-75 iCedula" type="number" #textId>
+      <button class="button text-white  w-25 mt-4" (click)="getUser(textId.value)" >Consultar</button>
     </div>
-    <div>
-      Nombre: {{user.Nombres}}
-    </div>
-    <div>
-      Apellido: {{user.Apellido1 +' '+user.Apellido2}}
-    </div>
-    <div>
-      Fecha: {{user.FechaNacimiento }}
-    </div>
-    <div>
-      Foto: <img src="{{user.foto}}" alt="">
-    </div>
-    <div>
-      Signo Zodiacal: {{maria}}
-    </div>
-</ng-container>
+  </div>
+
+  <hr>
+
+  <div class="text-center text-danger">
+    <ng-container *ngIf="notFound" >
+        <h5>Usuario no encontrado</h5>
+    </ng-container>
+  </div>
+    <ng-container *ngIf="user">
+      <div class="dCard mx-auto card p-4 bg-silver w-50">
+        <h4 class="mx-auto">{{user.Nombres}}</h4>
+        <div class="row">
+          <div class="col card-text">
+              <div>
+                Cedula: {{user.Cedula}}
+              </div>
+              <div>
+                Nombre: {{user.Nombres}}
+              </div>
+              <div>
+                Apellido: {{user.Apellido1 +' '+user.Apellido2}}
+              </div>
+              <div>
+                Fecha: {{user.FechaNacimiento }}
+              </div>
+              <div>
+                Signo Zodiacal: {{maria}}
+              </div>
+            </div>
+          <div class="col">
+              <div class="ml-4">
+                <img src="{{user.foto}}" class="rounded img-fluid img-thumbnail bg-secondary" alt="">
+              </div>
+          </div>
+
+
+          </div>
+      </div>
+    </ng-container>
+
+</div>

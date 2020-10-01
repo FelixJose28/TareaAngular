@@ -1,0 +1,26 @@
+.tRegistrar{
+  color: #A32B31;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.custom-shape-divider-bottom-1601532525 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1601532525 svg {
+  position: relative;
+  display: block;
+  width: calc(122% + 1.3px);
+  height: 243px;
+}
+
+.custom-shape-divider-bottom-1601532525 .shape-fill {
+  fill: #A32B31;
+}

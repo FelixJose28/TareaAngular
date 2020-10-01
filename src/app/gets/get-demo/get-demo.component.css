@@ -1,0 +1,25 @@
+.dBuscar{
+
+  box-shadow:  3px 3px 7px 6px #ccc;
+  width: 70vh;
+  height: 50vh;
+}
+.dCard{
+  box-shadow:  3px 3px 7px 6px #ccc;
+}
+.tRegistrar{
+  color: #A32B31;
+}
+.iCedula{
+  background: #eef1f5;
+}
+.button{
+  background-color: #A32B31; /* Green */
+  border: none;
+  color: white;
+  padding: 2% 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
