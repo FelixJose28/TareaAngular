@@ -8,11 +8,11 @@ import {User} from '../models/user';
   providedIn: 'root'
 })
 export class UserService {
-  baseURL = environment.apiURL;
+
+
 
   constructor(private http: HttpClient) { }
-  getUser(userId: string): Observable<User>{
-    const url = this.baseURL+userId;
-    return this.http.get<User>(url);
+  getUser(userId: string): Observable<any>{
+    return this.http.get(`https://api.adamix.net/apec/cedula/${userId}`);
   }
 }

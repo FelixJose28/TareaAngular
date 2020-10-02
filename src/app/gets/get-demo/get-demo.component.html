@@ -1,4 +1,4 @@
-<div class="dConsultar ">
+
 
   <div class="dBuscar mx-auto" id="dBuscarlo" >
     <div class="form-group  mx-auto text-center">
@@ -9,13 +9,13 @@
   </div>
   <hr>
 
-  <div class="text-center text-danger">
-    <ng-container *ngIf="notFound" >
+
+
+      <div class="text-center text-danger" *ngIf="notFound">
         <h5>Usuario no encontrado</h5>
-    </ng-container>
-  </div>
-    <ng-container *ngIf="user">
-      <div class="dCard mx-auto  card p-4 bg-silver w-50">
+      </div>
+
+      <div class="dCard mx-auto  card p-4 bg-silver w-50" *ngIf="user">
         <h4 class="mx-auto">{{user.Nombres}}</h4>
         <div class="row">
           <div class="col card-text">
@@ -32,21 +32,21 @@
                 Fecha: {{user.FechaNacimiento }}
               </div>
               <div>
-                Signo Zodiacal: {{getZodiaco(user.FechaNacimiento)}}
+                Signo Zodiacal: {{obtenerZodiaco(user.FechaNacimiento)}}
               </div>
               <div>
-                Edad: {{getEdad(user.FechaNacimiento)}}
+                Edad: {{obtenerEdad(user.FechaNacimiento)}}
               </div>
             </div>
           <div class="col">
               <div class="ml-4">
-                <img src="{{user.foto}}" class="rounded img-fluid img-thumbnail bg-secondary" alt="">
+                <img src="{{user.foto}}" class="rounded img-fluid bg-secondary" alt="">
               </div>
           </div>
 
 
           </div>
       </div>
-    </ng-container>
 
-</div>
+
+

@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  apiURL : 'https://api.adamix.net/apec/cedula/'
 };
 
 /*

@@ -13,28 +13,20 @@ import { getLocaleDateTimeFormat } from '@angular/common';
 export class GetDemoComponent implements OnInit {
   notFound = false;
   user: User;
-  maria = 12;
-  fechaDeLaApi = '';
-
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
 
   }
-  getZodiaco() {
+  obtenerZodiaco() {
     let dia;
     let mes;
-    let year;
 
     dia = Number(this.user.FechaNacimiento.substring(8, 10))
     mes = Number(this.user.FechaNacimiento.substring(5, 7))
-    year = Number(this.user.FechaNacimiento.substring(0, 4))
 
-    console.log(mes);
-    console.log(dia);
-
-    if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4))
+  if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4))
     return ('Aries');
   if ((dia >= 24 && mes == 9) || (dia <= 23 && mes == 10))
     return ('Libra');
@@ -43,11 +35,11 @@ export class GetDemoComponent implements OnInit {
   if ((dia >= 24 && mes == 10) || (dia <= 22 && mes == 11))
     return ('Escorpio');
   if ((dia >= 22 && mes == 5) || (dia <= 21 && mes == 6))
-    return ('G\u00E9minis');
+    return ('Geminis');
   if ((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12))
     return ('Sagitario');
   if ((dia >= 21 && mes == 6) || (dia <= 23 && mes == 7))
-    return ('C\u00E1ncer');
+    return ('Cancer');
   if ((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1))
     return ('Capricornio');
   if ((dia >= 24 && mes == 7) || (dia <= 23 && mes == 8))
@@ -58,17 +50,16 @@ export class GetDemoComponent implements OnInit {
     return ('Virgo');
   if ((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3))
     return ('Piscis');
-
   }
-  getEdad(edad) {
+  obtenerEdad(fechaAEdad) {
 
-    let fechaN = new Date(edad)
-    let fechaAcutal = new Date()
-    let resultado
+    let fechaNacimiento = new Date(fechaAEdad);
+    let fechaActual = new Date();
+    let edadPersona
 
-    resultado = (fechaAcutal.getFullYear() - fechaN.getFullYear())
+    edadPersona = (fechaActual.getFullYear() - fechaNacimiento.getFullYear())
 
-    return resultado
+    return edadPersona
   }
 
 
@@ -78,10 +69,6 @@ export class GetDemoComponent implements OnInit {
     this.userService.getUser(userID).subscribe((userFromTheApi: User)=>{
       if(userFromTheApi.ok == true){
         this.user = userFromTheApi;
-
-
-
-
       }else{
         this.notFound = true;
       }

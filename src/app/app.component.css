@@ -4,24 +4,12 @@
   font-size: 18px;
   font-weight: bold;
 }
-.custom-shape-divider-bottom-1601532525 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+body{
+  background-image: url('./../assets/images/wave.svg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
-.custom-shape-divider-bottom-1601532525 svg {
-  position: relative;
-  display: block;
-  width: calc(122% + 1.3px);
-  height: 243px;
-}
 
-.custom-shape-divider-bottom-1601532525 .shape-fill {
-  fill: #A32B31;
-  
-}
+
