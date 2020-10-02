@@ -1,13 +1,12 @@
 <div class="dConsultar ">
 
-  <div class="dBuscar mx-auto">
+  <div class="dBuscar mx-auto" id="dBuscarlo" >
     <div class="form-group  mx-auto text-center">
       <h1 class="tRegistrar p-3">Registrar</h1>
       <input class="form-control mx-auto w-75 iCedula" type="number" #textId>
       <button class="button text-white  w-25 mt-4" (click)="getUser(textId.value)" >Consultar</button>
     </div>
   </div>
-
   <hr>
 
   <div class="text-center text-danger">
@@ -16,7 +15,7 @@
     </ng-container>
   </div>
     <ng-container *ngIf="user">
-      <div class="dCard mx-auto card p-4 bg-silver w-50">
+      <div class="dCard mx-auto  card p-4 bg-silver w-50">
         <h4 class="mx-auto">{{user.Nombres}}</h4>
         <div class="row">
           <div class="col card-text">
@@ -33,7 +32,10 @@
                 Fecha: {{user.FechaNacimiento }}
               </div>
               <div>
-                Signo Zodiacal: {{maria}}
+                Signo Zodiacal: {{getZodiaco(user.FechaNacimiento)}}
+              </div>
+              <div>
+                Edad: {{getEdad(user.FechaNacimiento)}}
               </div>
             </div>
           <div class="col">

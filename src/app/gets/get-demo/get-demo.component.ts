@@ -15,16 +15,6 @@ export class GetDemoComponent implements OnInit {
   user: User;
   maria = 12;
   fechaDeLaApi = '';
-  date = new Date();
-  actual = Date.now();
-  dateDay = new Date().getDay();
-  dolorin = new Date().getDate();
-
-
-  today: number = Date.now();
-  mes = new Date().getMonth().toString();
-  dia = this.date.getDay.toString();
-
 
 
   constructor(private userService: UserService) { }
@@ -32,28 +22,65 @@ export class GetDemoComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  signoZodiacal(fecha){
+  getZodiaco() {
+    let dia;
+    let mes;
+    let year;
+
+    dia = Number(this.user.FechaNacimiento.substring(8, 10))
+    mes = Number(this.user.FechaNacimiento.substring(5, 7))
+    year = Number(this.user.FechaNacimiento.substring(0, 4))
+
+    console.log(mes);
+    console.log(dia);
+
+    if ((dia >= 21 && mes == 3) || (dia <= 20 && mes == 4))
+    return ('Aries');
+  if ((dia >= 24 && mes == 9) || (dia <= 23 && mes == 10))
+    return ('Libra');
+  if ((dia >= 21 && mes == 4) || (dia <= 21 && mes == 5))
+    return ('Tauro');
+  if ((dia >= 24 && mes == 10) || (dia <= 22 && mes == 11))
+    return ('Escorpio');
+  if ((dia >= 22 && mes == 5) || (dia <= 21 && mes == 6))
+    return ('G\u00E9minis');
+  if ((dia >= 23 && mes == 11) || (dia <= 21 && mes == 12))
+    return ('Sagitario');
+  if ((dia >= 21 && mes == 6) || (dia <= 23 && mes == 7))
+    return ('C\u00E1ncer');
+  if ((dia >= 22 && mes == 12) || (dia <= 20 && mes == 1))
+    return ('Capricornio');
+  if ((dia >= 24 && mes == 7) || (dia <= 23 && mes == 8))
+    return ('Leo');
+  if ((dia >= 21 && mes == 1) || (dia <= 19 && mes == 2))
+    return ('Acuario');
+  if ((dia >= 24 && mes == 8) || (dia <= 23 && mes == 9))
+    return ('Virgo');
+  if ((dia >= 20 && mes == 2) || (dia <= 20 && mes == 3))
+    return ('Piscis');
 
   }
+  getEdad(edad) {
+
+    let fechaN = new Date(edad)
+    let fechaAcutal = new Date()
+    let resultado
+
+    resultado = (fechaAcutal.getFullYear() - fechaN.getFullYear())
+
+    return resultado
+  }
+
+
   getUser(userID: string){
     this.notFound = false;
     this.user = null;
-
     this.userService.getUser(userID).subscribe((userFromTheApi: User)=>{
       if(userFromTheApi.ok == true){
         this.user = userFromTheApi;
 
 
-        this.fechaDeLaApi = this.user.FechaNacimiento;
-        this.dia = this.fechaDeLaApi;
-        console.log(this.dia)
-        console.log(this.dolorin)
 
-        // if(this.user.FechaNacimiento >= `2090-10-03 00:00:00.000`){
-        //   console.log('Prueba pruebita')
-        //   console.log(this.fechaDeLaApi);
-        //    40225384896
-        // }
 
       }else{
         this.notFound = true;
